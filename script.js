@@ -10,7 +10,7 @@ document.getElementById("orderForm").addEventListener("submit", e => {
     `Notes: ${f[3].value}`;
 
   window.location.href =
-    "mailto:YOUREMAIL@example.com" +
+    "mailto:thelithiumcompany@gmail.com" +
     "?subject=New Lithium Order" +
     "&body=" + encodeURIComponent(body);
 
