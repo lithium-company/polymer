@@ -46,6 +46,12 @@ nav {
   align-items: center;
 }
 
+.logo {
+  font-weight: 700;
+  color: #1e90ff;
+  font-size: 1.2rem;
+}
+
 nav a {
   text-decoration: none;
   color: #333;
@@ -133,7 +139,6 @@ nav a:hover {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 1s forwards;
 }
 
 .feature-card:nth-child(1) { animation-delay: 0.3s; }
@@ -156,6 +161,17 @@ nav a:hover {
 }
 
 /* ---------------------------
+   Contact Form
+--------------------------- */
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 15px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* ---------------------------
    Footer
 --------------------------- */
 footer {
@@ -171,44 +187,34 @@ footer {
    Animations
 --------------------------- */
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* ---------------------------
+   Fade-in on scroll
+--------------------------- */
+.feature-card.appear,
+.hero h1.appear,
+.hero p.appear,
+.cta-button.appear {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease-out;
 }
 
 /* ---------------------------
    Responsive Design
 --------------------------- */
 @media (max-width: 1024px) {
-  .features {
-    justify-content: center;
-  }
+  .features { justify-content: center; }
 }
 
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-  .feature-card {
-    width: 90%;
-  }
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav a {
-    margin: 10px 0 0 0;
-  }
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+  .features { flex-direction: column; align-items: center; }
+  .feature-card { width: 90%; }
+  nav { flex-direction: column; align-items: flex-start; }
+  nav a { margin: 10px 0 0 0; }
 }
