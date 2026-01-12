@@ -1,30 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Place an Order</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place an Order - Polymer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Place an Order</h1>
+<header>
+  <nav>
+    <div class="logo">Polymer</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#order-form">Order</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
 
-<form id="orderForm">
-  <label>Name</label>
-  <input required>
+<section class="hero">
+  <h1>Place Your Order</h1>
+  <p>Fill out the form below and we will get back to you as soon as possible.</p>
+</section>
 
-  <label>What do you want printed?</label>
-  <input required>
+<section class="contact" id="order-form">
+  <div class="feature-card" style="margin: auto; max-width: 400px;">
+    <form action="mailto:contact@polymer.com" method="POST" enctype="text/plain">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required style="width:100%; padding:8px; margin:5px 0; border-radius:5px; border:1px solid #ccc;">
 
-  <label>Color (optional)</label>
-  <input>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required style="width:100%; padding:8px; margin:5px 0; border-radius:5px; border:1px solid #ccc;">
 
-  <label>Extra details</label>
-  <textarea></textarea>
+      <label for="details">Order Details</label>
+      <textarea id="details" name="details" rows="5" required style="width:100%; padding:8px; margin:5px 0; border-radius:5px; border:1px solid #ccc;"></textarea>
 
-  <button type="submit">Submit Order</button>
-</form>
+      <button type="submit" class="cta-button" style="width:100%; margin-top:10px;">Submit</button>
+    </form>
+  </div>
+</section>
 
-<p id="status"></p>
+<footer>
+  <p>© 2026 Polymer. All rights reserved.</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
