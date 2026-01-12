@@ -1,6 +1,4 @@
-// ---------------------------
 // Fade in elements on scroll
-// ---------------------------
 const faders = document.querySelectorAll('.feature-card, .hero h1, .hero p, .cta-button');
 
 const appearOptions = {
@@ -16,13 +14,9 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer) {
   });
 }, appearOptions);
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
+faders.forEach(fader => appearOnScroll.observe(fader));
 
-// ---------------------------
-// Order Form Email Sender
-// ---------------------------
+// Order form auto email
 const orderForm = document.querySelector('#order-form form');
 if (orderForm) {
   orderForm.addEventListener('submit', function(e) {
@@ -37,7 +31,6 @@ if (orderForm) {
       `Name: ${name}\nEmail: ${email}\n\nOrder Details:\n${details}`
     );
 
-    // Open user's email client
     window.location.href = `mailto:thelithiumcompany@gmail.com?subject=${subject}&body=${body}`;
   });
 }
